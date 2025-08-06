@@ -9,9 +9,9 @@
 class Wheel {
     private:
         int wheel_prizes[24] = {(int)NonMonetaryValue::BANKRUPT, 5000, 500, 900, 700,
-                                                300, 800, 550, 400, 500, 600, 350, 500, 900,
-                                                (int)NonMonetaryValue::BANKRUPT, 650, 1000, 700,
-                                                (int)NonMonetaryValue::LOSE_A_TURN, 800, 500, 450, 500, 300};
+                                300, 800, 550, 400, 500, 600, 350, 500, 900,
+                                (int)NonMonetaryValue::BANKRUPT, 650, 1000, 700,
+                                (int)NonMonetaryValue::LOSE_A_TURN, 800, 500, 450, 500, 300};
         
     public:
         enum class NonMonetaryValue {
