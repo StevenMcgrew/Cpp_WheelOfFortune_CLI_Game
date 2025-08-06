@@ -1,9 +1,5 @@
 #pragma once
 
-#include <vector>
-#include <variant>
-#include <random>
-
 #include "utils.cpp"
 
 class Wheel {
@@ -20,6 +16,7 @@ class Wheel {
         };
 
         int spin() {
-            return wheel_prizes[get_random_integer(0, 23)];
+            int random_index = get_random_integer(0, 23);
+            return wheel_prizes[random_index];
         }
 };

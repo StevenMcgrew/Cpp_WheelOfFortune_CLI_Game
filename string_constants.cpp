@@ -1,6 +1,8 @@
 #include <string_view>
 
-constexpr std::string_view TITLE = R"(
+using std::string_view;
+
+constexpr string_view TITLE = R"(
    __    __ __ __   ___   ___ _               
   |  |__|  |  |  | /  _] /  _] |              
   |  |  |  |  |  |/  [_ /  [_| |              
@@ -22,25 +24,25 @@ constexpr std::string_view TITLE = R"(
   |__|   \___/|__|\_| |__|  \__,_|__|__|_____|
 )";
 
-constexpr std::string_view INTRO_OPTIONS = R"(
+constexpr string_view INTRO_OPTIONS = R"(
 
     1) Start game
     2) Instructions
     3) Exit
 )";
 
-constexpr std::string_view INVALID_INPUT_WARNING = "    Invalid input. Please enter a number from the options given.";
+constexpr string_view INVALID_INPUT_WARNING = "    Invalid input. Please enter a number from the options given.";
 
-constexpr std::string_view GAMEPLAY_OPTIONS = R"(
+constexpr string_view GAMEPLAY_OPTIONS = R"(
     1) Spin the wheel
     2) Buy a vowel for $250
     3) Solve the puzzle
     4) Exit game)";
 
-constexpr std::string_view GOODBYE_MESSAGE = R"(    Thanks for playing! Goodbye.
+constexpr string_view GOODBYE_MESSAGE = R"(    Thanks for playing! Goodbye.
 )";
 
-constexpr std::string_view GAME_INSTRUCTIONS = R"(
+constexpr string_view GAME_INSTRUCTIONS = R"(
   INSTRUCTIONS
 
     This simplified version of the game show 'Wheel of Fortune' features

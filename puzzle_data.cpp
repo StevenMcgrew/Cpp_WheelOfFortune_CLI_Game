@@ -6,13 +6,19 @@
 
 #include "utils.cpp"
 
+using std::string;
+using std::vector;
+using std::unordered_map;
+
+typedef unordered_map<string, string> Map_str_str;
+
 class PuzzleData {
     public:
-        std::string puzzle;
-        std::string category;
-        std::string puzzle_state;
+        string puzzle;
+        string category;
+        string puzzle_state;
         int amount_complete;
-        std::vector<std::unordered_map<std::string, std::string>> puzzles = {
+        vector<Map_str_str> puzzles = {
             {
                 {"category", "SHOW BIZ"},
                 {"puzzle", "THEATER CURTAIN"}
@@ -60,11 +66,11 @@ class PuzzleData {
         }
 
         void set_random_puzzle() {
-            int max_index = puzzles.size() - 1;
-            int rand_index = get_random_integer(0, max_index);
-            std::unordered_map<std::string, std::string> rand_puzzle = puzzles[rand_index];
-            category = rand_puzzle["category"];
-            puzzle = rand_puzzle["puzzle"];
+            int last_index = puzzles.size() - 1;
+            int random_index = get_random_integer(0, last_index);
+            Map_str_str random_puzzle = puzzles[random_index];
+            category = random_puzzle["category"];
+            puzzle = random_puzzle["puzzle"];
         }
 
         void set_initial_puzzle_state() {

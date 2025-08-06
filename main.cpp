@@ -1,17 +1,17 @@
 #include <print>
 
-#include "string_constants.cpp"
-#include "wheel.cpp"
 #include "puzzle_data.cpp"
+
+using std::println;
 
 int main() {
     PuzzleData pd;
     
-    std::println();
+    println();
 
-    std::println("{}", pd.category);
-    std::println("{}", pd.puzzle);
+    println("{}", pd.category);
+    println("{}", pd.puzzle);
     
-    std::println();
+    println();
     return 0;
 }
