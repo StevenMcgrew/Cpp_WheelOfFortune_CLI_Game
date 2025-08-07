@@ -9,8 +9,9 @@ int main() {
     
     println();
 
-    println("{}", pd.category);
-    println("{}", pd.puzzle);
+    println("Category: {}", pd.category);
+    println("Puzzle: {}", pd.puzzle);
+    println("Puzzle state: {}", pd.puzzle_state);
     
     println();
     return 0;

@@ -63,6 +63,7 @@ class PuzzleData {
 
         PuzzleData() {
             set_random_puzzle();
+            set_initial_puzzle_state();
         }
 
         void set_random_puzzle() {
@@ -74,7 +75,15 @@ class PuzzleData {
         }
 
         void set_initial_puzzle_state() {
-
+            puzzle_state = puzzle;
+            int puzzle_length = puzzle.length();
+            for (int i = 0; i < puzzle_length; ++i) {
+                switch (puzzle[i]) {
+                    case '-': puzzle_state[i] = '-'; break;
+                    case ' ': puzzle_state[i] = ' '; break;
+                    default: puzzle_state[i] = '*';
+                }
+            }
         }
 
 
